@@ -21,7 +21,7 @@ void number_of_products_div()
 
     for (int i(0);i<n-1;i++)
         for (int j(i+1);j<n;j++)
-            cout << numbers[i] << " " << numbers[j] << endl;
+            cout << numbers[i] * numbers[j] << endl;
 }
 
 int main()
