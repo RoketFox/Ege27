@@ -5,8 +5,8 @@ using namespace std;
 void number_of_products_div()
 {
     /**
-    1. считать и запомнить входные числа
-    2. вывести все пары чисел
+    +1. считать и запомнить входные числа
+    +2. вывести все пары чисел
     3. вместо вывода пар посчитать произведение
     4. вывести пары, произведения которых равны 22
     5. только кол-во пар
@@ -18,8 +18,10 @@ void number_of_products_div()
 
     for (int i(0);i<n;i++)
         cin >> numbers[i];
-    for (int i(0);i<n;i++)
-        cout<< numbers[i]<<" ";
+
+    for (int i(0);i<n-1;i++)
+        for (int j(i+1);j<n;j++)
+            cout << numbers[i] << " " << numbers[j] << endl;
 }
 
 int main()
