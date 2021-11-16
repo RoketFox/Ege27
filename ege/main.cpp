@@ -18,8 +18,10 @@ void max_sum_div_INEFF()
     for (int i(0); i < n; i++)
         cin >> numbers[i];
     cout << endl;
-    for (int i(0); i < n; i++)
-        cout << numbers[i] << " ";
+
+    for (int i(0);i<n-1;i++)
+        for (int j(i+1);j<n;j++)
+            cout << numbers[i] << " " << numbers[j] << endl;
 }
 
 int main()
