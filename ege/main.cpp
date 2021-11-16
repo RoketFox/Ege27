@@ -15,7 +15,8 @@ void max_sum_div_INEFF()
     5. вывести только наибольшую сумму
     */
     int n(0);
-    int sum(0);
+    int currsum(0);
+    int finsum(0);
     ifs >> n;
     vector<int> numbers(n);
     for (int i(0); i < n; i++)
@@ -23,9 +24,17 @@ void max_sum_div_INEFF()
     cout << endl;
 
     for (int i(0);i<n-1;i++)
+    {
         for (int j(i+1);j<n;j++)
-            if ((numbers[i] + numbers[j]) % 2 != 0)
-                cout << numbers[i] + numbers[j] << endl;
+        {
+            currsum = numbers[i] + numbers[j];
+            if (currsum % 2 != 0 & currsum > finsum)
+            {
+                finsum = currsum;
+            }
+        }
+    }
+    cout << finsum << endl;
 }
 
 int main()
