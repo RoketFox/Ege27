@@ -34,7 +34,8 @@ void max_sum_div_INEFF()
             }
         }
     }
-    cout << finsum << endl;
+    if (finsum == 0) cout << "-1" << endl;
+    else cout << finsum << endl;
 }
 
 int main()
