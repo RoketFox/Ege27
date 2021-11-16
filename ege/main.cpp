@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
 void max_sum_div_INEFF()
 {
+    ifstream ifs("data.txt");
     /**
     1. считать и запомнить входные числа
     2. вывести все пары чисел
@@ -13,10 +15,10 @@ void max_sum_div_INEFF()
     5. вывести только наибольшую сумму
     */
     int n(0);
-    cin >> n;
+    ifs >> n;
     vector<int> numbers(n);
     for (int i(0); i < n; i++)
-        cin >> numbers[i];
+        ifs >> numbers[i];
     cout << endl;
 
     for (int i(0);i<n-1;i++)
