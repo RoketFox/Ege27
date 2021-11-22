@@ -6,7 +6,6 @@ using namespace std;
 
 void max_sum_div_INEFF()
 {
-    ifstream ifs("data.txt");
     /**
     1. считать и запомнить входные числа
     2. вывести все пары чисел
@@ -17,18 +16,17 @@ void max_sum_div_INEFF()
     int n(0);
     int currsum(0);
     int finsum(0);
-    ifs >> n;
+    cin >> n;
     vector<int> numbers(n);
     for (int i(0); i < n; i++)
-        ifs >> numbers[i];
-    cout << endl;
+        cin >> numbers[i];
 
     for (int i(0);i<n-1;i++)
     {
         for (int j(i+1);j<n;j++)
         {
             currsum = numbers[i] + numbers[j];
-            if (currsum % 2 != 0 & currsum > finsum)
+            if (currsum % 2 != 0 && currsum > finsum)
             {
                 finsum = currsum;
             }
