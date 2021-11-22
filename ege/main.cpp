@@ -23,7 +23,8 @@ void number_products_div_ineff_2()
 
     for (int i(0);i<n-1;i++)
         for (int j(i+1);j<n;j++)
-            cout << numbers[i] * numbers[j] << endl;
+            if ((numbers[i]*numbers[j])%42 == 0)
+                cout << numbers[i] << " " << numbers[j] << endl;
 }
 
 int main()
