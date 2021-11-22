@@ -13,8 +13,9 @@ void number_products_div_ineff_2()
     5. только кол-во пар
     */
 
-        int n(0);
+    int n(0);
     cin >> n;
+    int sum(0);
 
     vector<int> numbers(n,0);
 
@@ -24,7 +25,8 @@ void number_products_div_ineff_2()
     for (int i(0);i<n-1;i++)
         for (int j(i+1);j<n;j++)
             if ((numbers[i]*numbers[j])%42 == 0)
-                cout << numbers[i] << " " << numbers[j] << endl;
+                sum += 1;
+    cout << sum << endl;
 }
 
 int main()
