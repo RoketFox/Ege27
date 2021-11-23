@@ -1,17 +1,30 @@
 #include <iostream>
-
+#include <inttypes.h>
 using namespace std;
 
-void number_of_products_div()
+void count_of_prod()
 {
-    /**
-    1. считать число
-    2. увеличить один из счетчиков: делящиеся на 55
-    3. ответ: n55*(n55-1)/2+55n*n5+n55*n11+n55*no+n11
-    */
+
+   uint32_t n; cin >> n;
+   uint32_t nn, n5, n11, n55;
+
+   nn = n5 = n11 = n55 = 0;
+
+   for (uint32_t i = 0; i < n; i++)
+   {
+        int a; cin >> a;
+        if (a % 55 == 0)
+            n55++;
+        else if (a % 5 == 0)
+            n5++;
+        else if (a % 11 == 0)
+            n11++;
+   }
+   nn = n - n55 - n11 - n5;
+   cout << n55*n11+n55*n5+n55*nn+n55*(n55-1)/2+n5*n11;
 }
 
 int main()
 {
-    return 0;
+    count_of_prod();
 }
