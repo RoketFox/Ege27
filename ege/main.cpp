@@ -10,27 +10,28 @@ void count_of_prod()
     */
 
    int n; cin >> n;
-   int nn, n2, n7, n11, n14, n22, n77, n154;
-   cout << n << endl;
+   int nn, n2, n5, n7, n10, n14, n35, n70;
 
-   nn = n2 = n7 = n11 = n14 = n22 = n77 = n154 = 0;
+
+   nn = n2 = n5 = n7 = n10 = n14 = n35 = n70 = 0;
 
    for (int i = 0; i < n; i++)
    {
+       ///cout << i << endl;
         int a; cin >> a;
-        if      (a % 154 == 0) n154++;
-        else if (a % 77  == 0) n77++;
-        else if (a % 22  == 0) n22++;
+        if      (a % 70 == 0) n70++;
+        else if (a % 35  == 0) n35++;
         else if (a % 14  == 0) n14++;
-        else if (a % 11  == 0) n11++;
-        else if (a % 7   == 0) n7++;
+        else if (a % 10  == 0) n10++;
+        else if (a % 7  == 0) n7++;
+        else if (a % 5   == 0) n5++;
         else if (a % 2   == 0) n2++;
-        else                   n++;
+        else                   nn++;
    }
 
    ///cout << n55*n11+n55*n5+n55*nn+n55*(n55-1)/2+n5*n11;
-   cout << " " << nn<< " " << n2<< " " << n7<< " " << n11<< " " << n14<< " " << n22<< " " << n77<< " " << n154 << " " << endl;
-   cout << n154*nn + n154*n2 + n154*n7 + n154*n11 + n154*n14 + n154*n22 + n154*n77 + n154*(n154-1)/2 + n14*n11 + n14*n77 + n14*n22 + n22*n77 + n22*n7 + n77*n2;
+   //cout << " " << nn<< " " << n2<< " " << n7<< " " << n11<< " " << n14<< " " << n22<< " " << n77<< " " << n154 << " " << endl;
+   cout << n70*nn + n70*n2 + n70*n5 + n70*n7 + n70*n10 + n70*n14 + n70*n35 + n70*(n70-1)/2 + n10*n7 + n10*n35 + n10*n14 + n14*n35 + n14*n5 + n35*n2;
 }
 
 int main()
