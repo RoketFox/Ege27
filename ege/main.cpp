@@ -22,8 +22,15 @@ void min_sum_min_distance_ineff_1()
     for (int i(0);i<n;i++)
         cin >> numbers[i];
     for (int i(0);i<n-1;i++)
-        for (int j(i+1);j<n;j++)
+    {
+        if (i+4 <= numbers.size())
+        {
+            for (int j(i+4);j<n;j++)
+            {
             cout << numbers[i] << " " << numbers[j] << endl;
+            }
+        }
+    }
 }
 
 int main()
