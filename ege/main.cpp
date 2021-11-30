@@ -16,6 +16,7 @@ void min_sum_min_distance_ineff_1()
 
     int n(0);
     cin >> n;
+    int minNum(1000);
 
     vector<int> numbers(n,0);
 
@@ -25,9 +26,10 @@ void min_sum_min_distance_ineff_1()
     {
         for (int j(i+4);j<n;j++)
         {
-        cout << numbers[i] + numbers[j] << endl;
+            if (numbers[i] + numbers[j] < minNum) minNum = numbers[i] + numbers[j];
         }
     }
+    cout << minNum << endl;
 }
 
 int main()
