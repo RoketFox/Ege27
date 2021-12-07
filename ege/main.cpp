@@ -17,15 +17,18 @@ void all_pairs_with_diff_index_ineff()
 
     int n(0);
     cin >> n;
+    int sum(0);
 
     vector<int> numbers(n,0);
 
     for (int i(0);i<n;i++)
         cin >> numbers[i];
-        for (int i(0);i<n-1;i++)
-            for (int j(i+1);j<n;j++)
-                if(abs(i-j)<=10)
-                    cout << numbers[i] << " " << numbers[j] << "|" << i << j <<endl;
+    for (int i(0); i<n-1; i++)
+        for (int j(i+1);j<n;j++)
+            if(abs(i-j)<10)
+                if ((numbers[i] + numbers[j]) % 37 == 0)
+                    sum++;
+    cout << sum;
 }
 
 int main()
