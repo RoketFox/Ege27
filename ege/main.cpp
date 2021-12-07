@@ -24,7 +24,8 @@ void all_pairs_with_diff_index_ineff()
         cin >> numbers[i];
         for (int i(0);i<n-1;i++)
             for (int j(i+1);j<n;j++)
-                cout << numbers[i] << " " << numbers[j] << endl;
+                if(abs(i-j)<=10)
+                    cout << numbers[i] << " " << numbers[j] << "|" << i << j <<endl;
 }
 
 int main()
