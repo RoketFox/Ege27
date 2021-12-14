@@ -17,7 +17,6 @@ void all_pairs_with_diff_index_ineff()
 
     int n(0);
     cin >> n;
-
     int sum(0);
 
     vector<int> numbers(n,0);
