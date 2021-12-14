@@ -25,8 +25,8 @@ void all_pairs_with_diff_index_ineff()
         cin >> numbers[i];
     for (int i(0); i<n-1; i++)
         for (int j(i+1);j<n;j++)
-            if(abs(i-j)<10)
-                if ((numbers[i] + numbers[j]) % 37 == 0)
+            if(abs(i-j)>=7)
+                if ((numbers[i] + numbers[j]) % 28 == 0)
                     sum++;
     cout << sum;
 }
