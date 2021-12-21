@@ -4,6 +4,8 @@
 
 void max_3nums_div_by4()
 {
+    int mult = 4;
+
     int N = 0;
     std::cin >> N;
 
@@ -17,7 +19,8 @@ void max_3nums_div_by4()
     for (int i = 0;i < N-1; i++)
         for (int j = i+1; j < N; j++)
             for (int k = j+1; k < N; k++)
-            std::cout << numbers[i] <<" "<< numbers[j] <<" "<< numbers[k] <<std::endl;
+                if ((numbers[i] * numbers[j] * numbers[k]) % mult == 0)
+                    std::cout << numbers[i] <<" "<< numbers[j] <<" "<< numbers[k] <<std::endl;
 }
 
 int main()
