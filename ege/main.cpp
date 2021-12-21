@@ -9,15 +9,14 @@ void max_3nums_div_by4()
 
     std::vector<int> numbers(N,0);
 
-    for (int i = 0;i<N;i++)
+    for (int i = 0; i<N; i++)
     {
         std::cin >> numbers[i];
     }
 
-    for (int i = 0;i < N;i++)
-    {
-        std::cout << numbers[i] << " ";
-    }
+    for (int i = 0;i < N-1; i++)
+        for (int j = i+1; j < N; j++)
+            std::cout << numbers[i] << " " << numbers[j] << std::endl;
 }
 
 int main()
