@@ -1,5 +1,6 @@
 #include <iostream>
 
+// all works good
 
 void max_3nums_div_by4_eff()
 {
